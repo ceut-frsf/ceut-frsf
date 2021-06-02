@@ -31,6 +31,28 @@
 </div>
 
 <div class="row">
+  <ng-container *ngFor="let month of months">
+    <div class="col-md-4 mt-4" [id]="month.name.toLowerCase()">
+      <table class="table shadow rounded">
+        <thead>
+          <tr>
+            <th class="mes rounded-top" colspan="7">
+              {{ month.name }} - {{ month.year }}
+            </th>
+          </tr>
+          <tr>
+            <ng-container *ngFor="let weekDay of weekDays">
+              <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </ng-container>
+</div>
+
+<div class="row">
   <div class="col-md-4 mt-4" id="marzo">
     <table class="table shadow rounded">
       <thead>
@@ -38,13 +60,9 @@
           <th class="mes rounded-top" colspan="7">Marzo</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -103,13 +121,9 @@
           <th class="mes rounded-top" colspan="7">Abril</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -169,13 +183,9 @@
           <th class="mes rounded-top" colspan="7">Mayo</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -240,13 +250,9 @@
           <th class="mes rounded-top" colspan="7">Junio</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -305,13 +311,9 @@
           <th class="mes rounded-top" colspan="7">Julio</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -370,13 +372,9 @@
           <th class="mes rounded-top" colspan="7">Agosto</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -439,13 +437,9 @@
           <th class="mes rounded-top" colspan="7">Septiembre</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -503,13 +497,9 @@
           <th class="mes rounded-top" colspan="7">Octubre</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -568,13 +558,9 @@
           <th class="mes rounded-top" colspan="7">Noviembre</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -633,13 +619,9 @@
           <th class="mes rounded-top" colspan="7">Diciembre</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -700,13 +682,9 @@
           <th class="mes rounded-top" colspan="7">Febrero 2021</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
@@ -762,13 +740,9 @@
           <th class="mes rounded-top" colspan="7">Marzo 2021</th>
         </tr>
         <tr>
-          <th class="feriado">D</th>
-          <th>L</th>
-          <th>M</th>
-          <th>X</th>
-          <th>J</th>
-          <th>V</th>
-          <th>S</th>
+          <ng-container *ngFor="let weekDay of weekDays">
+            <th [ngClass]="{ feriado: weekDay === 'D' }">{{ weekDay }}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
